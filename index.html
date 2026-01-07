@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
+<html lang="ru">
+    
     <head>
         <meta charset ="UTF-8"/>
         <tetle>Lenni</tetle>
+        <link rel="stylesheet" href ="styles/styles.css"/>
      </head>
-     <body>
-        <header>
-            <a href="#">
-                <nav>
-                    <a href="#">Мероприятие</a>
-                    <a href="#">Блог</a>
-                    <a href="#">О нас</a>
-                    <a href="#">Контакты</a>
+
+     <body class="body">
+        <header class="page header">
+            <a class="page-header_logo" href="#">Logo</a>
+                <nav class="page-header_nav">
+                    <a class="page-header_nav-link" href="#">Мероприятие</a>
+                    <a class="page-header_nav-link" href="#">Блог</a>
+                    <a class="page-header_logo" href="#">О нас</a>
+                    <a class="page-header_nav-link" href="#">Контакты</a>
                 </nav>
-                <main>
-                    <header>
+                <a class="page-header_user-link" href="#">Войти</a>
+        </header>
+                <main class="main">
+                    <div class="home">
+                    <header class="main-header home_main header">
                         <h1>АРТ-ПРОСТРАНСТВО</h1>
+                        <img />
+                        <p>для людей, горящих сердцем и делом место для настоящего</p>
                     </header>
-                    <section>
-                        <h2>О нас</h2>
+
+                    <section class="offers home_offers">
+                        <h4 class="offers_title">я хочу:</h4>
+                        <div class="offers_btns">
+                            <button class="offers_btn btn btn--red" type="button">Провести мероприятие</button>
+                    <button class="offers_btn btn" type="button">Стать арендатором</button>
+                    </div>
                     </section>
-                    <section>
-                        <h2>Мероприятие</h2>
+
+                        <section class="about home_about">
+                            <h2 class="about_section-title section-title">Онас</h2>
+                            <div class="about_container"></div>
                     </section>
-                    <section>
-                        <h2>Блог</h2>
+
+                    <section class="upcoming home_upcoming">
+                        <h2 class="upcoming_section-title section-title">Мероприятие</h2>
+                        <div class="upcoming_container"></div>
                     </section>
-                    <section>
-                        <h2>Контакты</h2>
+
+                    <section class="listing home_listing">
+                        <h2 class="listing_section-title section-title">Блог</h2>
+                        <div></div>
                     </section>
+
+                    <section class="contacts home_contacts">
+                        <h2class="contacts_section-title section-title">Контакты</h2>
+                        <div class="contacts_container"></div>
+                        <div class="doit"></div>
+                    </section>
+
+                    </div>
                 </main>
-                <footer></footer> 
+                <footer class ="page-footer"></footer> 
      </body>
      </html>
