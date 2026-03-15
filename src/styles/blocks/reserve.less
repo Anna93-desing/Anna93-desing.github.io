@@ -1,31 +1,183 @@
 .reserve {
     display: grid;
-    grid-template-columns: 405px 1fr;
-    /*grid-template-columns: 405px calc(89%-405px); */
-    gap : 65px 11%;
-    grid-template-areas: 
-        "checks schema"
+    gap: 65px 11%;
+    grid-template-columns: 405px calc(89% - 405px);
+    grid-template-areas:
+        "checks scheme"
         "order legend";
     width: 100%;
-    &__cheks {
-    grid-area: cheks;
-    background-color: yellow;
-}
 
-&__schema {
-    grid-area: schema;
-    background-color: rgb(255 ,162 , 0);
-}
+    @media @bw1340 {
+        grid-template-columns: 340px 1fr;
+        gap: 65px 6.5%;
+    }
 
-&__order {
-    grid-area: order;
-background-color: rgb(255 , 0 , 81);
-}
+    @media @bw1020 {
+        grid-template-columns: 1fr 390px;
+        gap: 60px;
+        grid-template-areas:
+            "scheme scheme"
+            "checks legend"
+            "checks order";
+    }
 
-&__legend {
-    grid-area: legend;
-    background-color: rgb(76 , 0 , 255);
-}
+    @media @bw768 {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "scheme"
+            "legend"
+            "checks"
+            "order";
+    }
+
+    &__check {
+        grid-area: checks;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px 0 0;
+    }
+
+
+
+    &__scheme {
+        grid-area: scheme;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__scheme-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 780px;
+    }
+
+    &__order {
+        grid-area: order;
+    }
+
+    &__legend {
+        grid-area: legend;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__legend-item {
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    &__box-red {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border: 1px solid @gray;
+        background-color: @red;
+    }
+
+    &__box-black {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border: 1px solid @gray;
+        background-color: @black;
+    }
+
+    &__note {
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .circle-cross {
+        position: relative;
+        width: 100px;
+        /* ширина контейнера */
+        height: 100px;
+        /* высота контейнера */
+    }
+
+    .circle-cross__circle {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid #333;
+    }
+
+    /* Первый круг — например, слева сверху */
+    .circle-cross__circle--first {
+        border-color: @black;
+    }
+
+    /* Второй круг — пересекается по центру и смещается */
+    .circle-cross__circle--second {
+        left: 12px;
+        border-color: @red;
+    }
+
+    &__section-title {
+        padding: 80px 0 30px 0;
+    }
+
+    &__scheme-title {
+        padding-top: 80px;
+    }
+
+    &__scheme-wrapper {
+        position: relative;
+        width: 100%;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            //padding-top: 51.15384%;
+        }
+    }
+
+    &__scene {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__tickets {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__qty {
+        &::after {
+            content: " " attr(data-caption) " | " attr(data-price);
+        }
+    }
+
+    &__sum {
+        &::after {
+            content: attr(data-currency);
+            margin-left: 4px;
+            font-size: 0.95em;
+        }
+    }
+
+    &__total {
+        &::before {
+            content: attr(data-caption);
+            margin-right: 30px;
+        }
+
+        &::after {
+            content: attr(data-currency);
+            margin-left: 4px;
+            font-size: 0.95em;
+        }
+    }
 }
 
 
