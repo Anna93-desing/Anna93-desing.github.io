@@ -1,1 +1,74 @@
-<footer class ="page-footer"></footer> 
+<footer class="page-footer">
+    <div class="page-footer__container container">
+        <div class="page-footer__fading-lines">
+            <div class="page-footer__line page-footer__line-left"></div>
+            <div class="page-footer__line page-footer__line-right"></div>
+        </div>
+        <div class="page-footer__block1">
+            <div class="page-footer__links">
+                <a class="page-footer__nav-link" href="#">Календарь мероприятий</a>
+                <a class="page-footer__nav-link" href="#">Провести мероприятие</a>
+                <a class="page-footer__nav-link" href="#">Стать арендатором</a>
+                <a class="page-footer__nav-link" href="#">Наши проекты</a>
+                <a class="page-footer__nav-link" href="#">Контакты</a>
+            </div>
+
+            <form action="https://jsonplaceholder.typicode.com/posts/1" class="page-footer__subscribe subscribe-form"
+                id="js-subscribeForm">
+                <h4 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h4>
+                <div class="subscribe-form__wrapper">
+                    <label class="subscribe-form__field">
+                        <input class="subscribe-form__input" type="email" name="email" placeholder="Email" required />
+                    </label>
+                    <button type="submit" class="subscribe-form__submit">
+                        Подписаться
+                    </button>
+                </div>
+
+                <label class="subscribe-form__check check">
+                    <input type="checkbox" name="agree" class="check__input" required checked />
+                    <span class="check__mark"></span>
+                    <span class="subscribe-form__check-label check__label">
+                        Согласен на обработку персональных данных
+                    </span>
+                </label>
+            </form>
+        </div>
+
+
+        <div class="page-footer__block2">
+            <div class="page-footer__left-block">
+                <p class="page-footer__comp">© Millennials 2025</p>
+                <div class="page-footer__cookies">
+                    <a class="page-footer__cookies-link" href="#">Политика конфиденциальности</a>
+                    <a class="page-footer__cookies-link" href="#">Cookies</a>
+                </div>
+            </div>
+            <div class="page-footer__center-block">
+                <a class="page-footer__social" href="#">
+                    <div class="page-footer__circle">
+                        <svg class="page-footer__logo-icon">
+                            <use xlink:href="assets/icons/la_vk.svg">
+                        </svg>
+                    </div>
+                </a>
+                <a class="page-footer__social" href="#">
+                    <div class="page-footer__circle">
+                        <svg class="page-footer__logo-icon">
+                            <use xlink:href="assets/icons/la_vk.svg">
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="page-footer__right-block">
+                <a class="page-footer__social2" href="#">
+                    <p class="page-footer__descr">Создание и продвижение</p>
+                    <svg class="page-footer__logo-icon2">
+                        <use xlink:href="assets/icons/dignity.svg">
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</footer>

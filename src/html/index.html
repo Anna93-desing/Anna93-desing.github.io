@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
-   @@include('blocks/head.html')    
-     <body class="body">
-   @@include('blocks/page-header.html') 
-                <main class="main">
-                    <div class="home">
-                    <section class="about">
-                        <div class="about__container">
-                            <div class="about__block"></div>
-                                <div class="abaut__block2">
-                                    <picture class="about__picture">
-                                        <img scr="assets/images/pic.jpg" class="about__img" alt="pic" />
-                                    </picture>
-                                    <h3 class="about__titie">
-                                        Мы предоставляем площади для вашего мероприятия 
-                                    </h3>
-                                    <picture class="about__picture2">
-                                        <img scr="assets/images/pic2.jpg"
-                                         class="abaut__imj"
-                                         alt="pic2" 
-                                         />
-                                    </picture>
-                                    <p class="about__text">
-                                    И оказываем помощь с организацией,если это вам нужно. Наша цель:
-                                    вовлечь в культурную жизнь как можно больше людей, помочь 
-                                    молодым ребятам сделать первые шаги к своей мечте и рассказать
-                                    всем о том, что их валнует. 
-                                </p>
-                        </div>
-                        </div>
-                    </section>
+<!-- class="show-event-popup" -->
+@@include('blocks/head.html')
 
-                    <!--prettier-ignore-->
-                    @@include('blocks/blog-listing.html', {"class": "home__listing"})
-                    </div>
-                </main>
-              @@include('blocks/page-footer.html')  
-              @@include('blocks/event-pp.html')
-     </body>
-     </html>
+<body class="body">
+    @@include('blocks/page-header.html')
+
+    <main class="main">
+        <div class="home">
+            <!-- prettier-ignore -->
+            @@include('blocks/art.html', {"class": "home__art"})
+            <!-- prettier-ignore -->
+            @@include('blocks/offers.html', {"class": "home__offers"})
+            <!-- prettier-ignore -->
+            @@include('blocks/about.html', {"class": "home__about"})
+            <!-- prettier-ignore -->
+            @@include('blocks/upcoming.html', {"class": "home__upcoming"})
+            <!-- prettier-ignore -->
+            @@include('blocks/blog-listing.html', {"class": "home__listing"})
+            <!-- prettier-ignore -->
+            @@include('blocks/contacts.html', {"class": "home__contacts"})
+            <!-- prettier-ignore -->
+            @@include('blocks/doit.html', {"class": "home__doit"})
+        </div>
+    </main>
+
+    @@include('blocks/page-footer.html')
+
+    @@include('blocks/event-pp.html')
+
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/jquery.selectric.js"></script>
+    <script src="scripts/jquery.mask.js"></script>
+    <script src="scripts/air-datepicker.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key="
+    ></script>
+    <script src="scripts/jquery.validate.js"></script>
+    <script src="scripts/jquery.validate-init.js"></script>
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 .container() {
-     box-sizing: border-box;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,26 +8,71 @@
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
+
+    @media @bw1340 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media @bw768 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.width_624() {
+    box-sizing: border-box;
+    width: 624px;
+    width: 100%;
+
+    @media @bw1660 {
+        width: 604px;
+    }
+
+    @media @bw1340 {
+        max-width: 566px;
+    }
+
+    @media @bw650 {
+        max-width: 280px;
+    }
 }
 
 .display-none {
     display: none;
 }
 
-.color-red {
-    color: @red;
+.section-title() {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 624px;
+    min-height: 62px;
+    margin: 0 auto 150px;
+    padding: 8px 45px;
+    background-color: @black;
+    color: @white;
+    font-family: @font2;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.277;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .show-event-popup {
     body {
         overflow: hidden;
     }
-    #eventPP {
+
+    #js-eventPP {
         display: flex;
     }
 }
 
-is-hidden{
+.is-hidden {
     position: absolute !important;
     width: 0 !important;
     height: 0 !important;
@@ -40,4 +85,43 @@ is-hidden{
     overflow: hidden !important;
     visibility: hidden !important;
     pointer-events: none !important;
+}
+
+.link-show-all {
+    display: flex;
+    padding-top: 70px;
+    font-family: @font1;
+    font-size: 16px;
+    font-weight: 600;
+    color: @black;
+    text-decoration: none;
+    display: inline-flex; // чтобы flex работал, но не растягивался
+    align-items: center;
+    margin-left: auto;
+
+}
+
+.show-nav {
+    body {
+        @media @bw1020 {
+            overflow: hidden;
+        }
+    }
+
+    .page-header__nav {
+        @media @bw1020 {
+            transform: translateX(0);
+        }
+    }
+
+    .page-header__nav-toggle {
+        &::before {
+            transform: translate(0px, 6px) rotate(45deg);
+            box-shadow: none;
+        }
+
+        &::after {
+            transform: translate(0px, -6px) rotate(-45deg);
+        }
+    }
 }

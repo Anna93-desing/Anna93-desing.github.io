@@ -10,12 +10,35 @@
     border-radius: 50%;
     background-color: @black;
     transition: background-color 0.2s;
-    &:hover,
-    &:active {
-        background-color: @red;
+
+    @media @bw768 {
+        width: 36px;
+        height: 36px;
     }
+
+    &:hover {
+        @media (hover: hover) {
+            background-color: @red_dark;
+        }
+    }
+
+    &:active {
+        background-color: @red_dark;
+    }
+
     &__icon {
-         color: @white;
-         pointer-events: none;
+        margin: auto;
+        color: @white;
+        pointer-events: none;
+
+        &:hover {
+            @media (hover: hover) {
+                background-color: @red_dark;
+            }
+        }
+
+        &:active {
+            background-color: @red_dark;
+        }
     }
 }
